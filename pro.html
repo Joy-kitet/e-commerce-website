@@ -1,0 +1,83 @@
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root";  // your DB username
+$password = "7739";      // your DB password
+$dbname = "shophub"; // your DB name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch products
+$sql = "SELECT id, name, description, price, image_url FROM products";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>ShopHub - All Products</title>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet"/>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+    <h1 class="font-bold text-lg">ShopHub</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="px-6 py-12 max-w-7xl mx-auto">
+    <!-- Title -->
+    <h2 class="font-bold text-lg mb-6">All Products</h2>
+
+    <!-- Search Bar -->
+    <div class="mb-8">
+      <input type="text" placeholder="Search products..." class="border border-gray-300 rounded-md p-2 w-full">
+    </div>
+
+    <!-- Categories -->
+    <div class="mb-8">
+      <h3 class="font-semibold mb-2">Categories</h3>
+      <div class="flex space-x-4">
+        <button class="px-4 py-2 border border-gray-300 rounded-md">Electronics</button>
+        <button class="px-4 py-2 border border-gray-300 rounded-md">Clothing</button>
+        <button class="px-4 py-2 border border-gray-300 rounded-md">Furniture</button>
+      </div>
+    </div>
+
+    <!-- Products List -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <?php
+      if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              echo '
+              <div class="border border-gray-200 rounded-md overflow-hidden">
+                <img src="' . $row["image_url"] . '" alt="' . $row["name"] . '" class="w-full h-48 object-cover">
+                <div class="p-4">
+                  <span class="text-xs uppercase text-gray-500 font-bold mb-2 block">Featured</span>
+                  <h3 class="font-semibold text-lg">' . $row["name"] . '</h3>
+                  <p class="text-gray-600 text-sm mb-2">' . $row["description"] . '</p>
+                  <p class="text-gray-900 font-bold">Price: $' . $row["price"] . '</p>
+                </div>
+              </div>
+              ';
+          }
+      } else {
+          echo "<p>No products available.</p>";
+      }
+      ?>
+    </div>
+  </main>
+
+</body>
+</html>
+
+<?php
+$conn->close();
+?>

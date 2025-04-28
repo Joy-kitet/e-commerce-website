@@ -1,0 +1,79 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   ShopHub - Contact
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom scrollbar for vertical scroll on the right */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #a1a1aa;
+      border-radius: 4px;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900 font-sans">
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+   <div class="text-purple-700 font-extrabold text-lg select-none">
+    ShopHub
+   </div>
+   <nav class="space-x-6 text-gray-600 text-sm font-normal">
+    <a class="hover:text-gray-900" href="index.html">
+     Home
+    </a>
+    <a class="hover:text-gray-900" href="product.html">
+     Products
+    </a>
+    <a class="hover:text-gray-900" href="about.html">
+     About
+    </a>
+    <a class="hover:text-gray-900" href="contact.html">
+     Contact
+    </a>
+   </nav>
+   <div class="mt-3 sm:mt-0">
+    <a href="cart.php" class="text-gray-700 hover:text-gray-900 text-lg">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+  </div>
+  
+  </header>
+  <main class="px-6 py-12 max-w-3xl mx-auto">
+   <h1 class="text-3xl font-extrabold text-purple-700 mb-6 select-none">
+    Contact Us
+   </h1>
+   <form class="space-y-6" action="#" method="POST" novalidate>
+    <div>
+     <label class="block text-sm font-semibold mb-1 select-none" for="name">
+      Name
+     </label>
+     <input class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+    </div>
+    <div>
+     <label class="block text-sm font-semibold mb-1 select-none" for="email">
+      Email
+     </label>
+     <input class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+    </div>
+    <div>
+     <label class="block text-sm font-semibold mb-1 select-none" for="message">
+      Message
+     </label>
+     <textarea class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent" id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+    </div>
+    <div>
+     <button class="bg-purple-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-purple-800 transition select-none" type="submit">
+      Send Message
+     </button>
+    </div>
+   </form>
+  </main>
+ </body>
+</html>
