@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-> **Coming Soon:** https://yourusername.github.io/shophub
+> **Coming Soon:** https://joy-kitet.github.io/e-commerce-website/
 
 ---
 
