@@ -33,5 +33,45 @@
 
 ---
 
-## 📂 Project Structure
+
+---
+
+## 📥 Installation & Setup
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/yourusername/shophub.git
+
+
+Install a PHP server (e.g., XAMPP, MAMP, or built-in PHP server):
+
+XAMPP/MAMP: Place shophub in your htdocs (XAMPP) or Sites (MAMP) folder.
+
+Built-in (requires PHP 7+):
+cd shophub
+php -S localhost:8000
+Set up the database:
+
+Create a database (e.g., shopdb) in MySQL.
+
+Import the schema SQL (e.g., php/schema.sql) which defines tables for products, orders, etc.
+
+Configure database connection in php/db.php with your MySQL credentials.
+
+Access the app in your browser:
+
+http://localhost/shophub/index.html
+
+
+🤝 Contributing
+Contributions are welcome! To contribute:
+
+Fork the repository
+
+Create a branch:
+
+bash
+Copy
+Edit
+
 
