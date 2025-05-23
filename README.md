@@ -22,26 +22,13 @@ Responsive Design: Mobile-first layout using Flexbox and CSS Grid.
 
 🛠️ Tech Stack
 
-Part
+Part                                                        Technology
 
-Technology
+Frontend                                                    HTML5, CSS3, JavaScript (ES6+)
 
-Frontend
+Backend                                                     PHP 7+, MySQL 
 
-HTML5, CSS3, JavaScript (ES6+)
+Storage                                                     MySQL database for products & orders
 
-Backend
-
-PHP 7+, MySQL (or SQLite)
-
-Storage
-
-MySQL database for products & orders
-
-Session Management
-
-PHP Sessions for user state
-
-Cart Persistence
-
-localStorage + PHP API
+Session Management                                          PHP Sessions for user state
+Cart Persistence                                            localStorage + PHP API
